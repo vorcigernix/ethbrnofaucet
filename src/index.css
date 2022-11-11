@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    body {
+        @apply text-white bg-black;
+    }
+
+    .title-font {
+        font-family: 'Ubuntu Mono', monospace;
+    }
+
+    .greenbtn {
+        @apply px-6 h-12 uppercase font-semibold tracking-wider border-2 border-white bg-white text-black hover:border-white disabled:opacity-20;
+    }
+
+    .whitebtn {
+        @apply px-6 h-12 uppercase font-semibold tracking-wider border border-slate-200 text-white hover:border-white disabled:opacity-20 hover:bg-white/30 disabled:hover:bg-black;
+    }
+
+    .redbtn {
+        @apply px-6 h-12 uppercase font-semibold tracking-wider border-2 border-black bg-red-400 text-white hover:border-red-400 disabled:opacity-10;
+    }
+}
+
+.anim {
+    background: linear-gradient(-45deg, rgba(200, 178, 245, 0.8), rgba(238, 203, 192, 0.8), rgba(135, 169, 240, 0.8), rgba(202, 179, 245, 0.8), rgba(238, 203, 192, 0.8), rgba(184, 251, 246, 0.8));
+    background-size: 400% 400%;
+    animation: gradient-animation 30s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
